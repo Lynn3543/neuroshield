@@ -260,6 +260,7 @@ body {
 
 .results-carousel .item {
   margin: 1rem;
+  display: block;
   overflow: hidden;
   padding: 1.5rem;
   font-size: 0;
@@ -747,7 +748,170 @@ a:focus {
     color: var(--text-primary) !important;
     box-shadow: none !important;
   }
+
 }
 
+/* Pipeline Section Styling */
+.pipeline-section {
+   background: var(--background-secondary);
+   padding: 4rem 1.5rem;
+   border-top: 1px solid var(--border-color);
+   border-to-bottom: 1px solid var(--border-color);
+  }
 
+ .pipeline-timeline {
+   max-width: 800px;
+   margin: 0 auto;
+   position: relative;
+}
+
+.pipeline-item {
+   display: flex;
+   margin-bottom: 2rem;
+   position: relative;
+   padding-left: 2.5rem
+
+}
+
+.pipeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.75rem;
+  /* Fine-tuned for perfect alignment with the first line of text */
+  width: 14px;
+  height: 14px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--background-secondary), 0 0 0 6px var(--primary-hover);
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.pipeline-item:hover::before {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 6px var(--background-secondary), 0 0 0 10px var(--primary-hover);
+}
+
+.pipeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2.1rem;
+  /* Adjusted for better alignment with the dot at 1.75rem */
+  width: 2px;
+  height: calc(100% + 1.5rem);
+  background: var(--border-color);
+  z-index: 1;
+}
+
+.timeline-content {
+  background: var(--background-primary);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-accent);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.timeline-content:hover::before {
+  opacity: 1;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.pipline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-item-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.timeline-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.pipeline-image {
+    margin-left: 2rem;
+    flex-shrink: 0;
+}
+
+.pipeline-image img {
+    width: 550px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.timeline-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.changelog-tag {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: var(--shadow-sm);
+}
+
+.tag-update {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.tag-new {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.tag-alert {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
 

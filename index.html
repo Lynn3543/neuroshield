@@ -5,27 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <meta name="title" content="NeuroShield: A Device-Agnostic Foundadtion Model for EEG Athentication - Matin Fallahi, Patricia Arias-Cabarcos, Thorsten Strufe">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="keywords" content="EEG authentication, brainwave authentication, transformer, foundation model, cross-dataset generalization">
+  <meta name="author" content="Matin Fallahi, Patricia Arias-Cabarcos, Thorsten Strufe">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
+  <meta property="og:site_name" content="Karlsruher Institute of Technology">
+  <meta property="og:title" content="NeuroShield: A Device-Agnostic Foundation Model for EEG Authentication">
   <!-- TODO: Same as description above -->
   <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <meta property="og:url" content="https://Lynn3543.github.io/neuroshield">
   <!-- TODO: Create a 1200x630px preview image and update path -->
   <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
@@ -73,12 +68,11 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>NeuroShield: A Device-Agnostic Foundation Model for EEG Authentication - Matin Fallahi, Patricia Arias-Cabarcos, Thorsten Strufe</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="static/images/brain-solid-full.svg?v=3">
+  <link rel="shortcut-icon" href="static/images/brain-solid-full.svg?v=3">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -111,56 +105,70 @@
   
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "NeuroShield: A Device-Agnostic Foundation Model for EEG Athentication",
+      "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Matin Fallahi",
+          "affiliation": {
+            "@type": "Organization",
+            "name": "Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Patricia Arias-Cabarcos",
+          "affiliation": {
+            "@type": "Organization",
+            "name": "Joint Research Centre, European Commission"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Thorsten Strufe",
+          "affiliation": {
+            "@type": "Organization",
+            "name": "Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany"
+          }
         }
+      ],
+      "datePublished": "2024-01-01",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CONFERENCE_OR_JOURNAL_NAME"
       },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+      "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+      "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+      "keywords": [
+        "EEG authentication",
+        "brainwave authentication",
+        "transformer",
+        "foundation model",
+        "cross-dataset generalization"
+      ],
+      "abstract": "A central challenge in EEG authentication is that models are typically tied to the acquisition settings in which they are trained. In particular, variations in headset hardware, channel layout, and signal duration create heterogeneous recordings that existing models are not designed to handle, causing each new headset or dataset to be treated as a separate model-development problem. This fragmentation limits multi-dataset learning, hinders knowledge transfer, and reduces model reusability. To address this limitation, we present NeuroShield, a reusable foundation model for EEG authentication that learns identity-discriminative embeddings from variable-channel and variable-length EEG recordings through a dual-stage transformer architecture. We pretrain NeuroShield on three public EEG datasets comprising 15,762 subjects and 28,116 sessions, and evaluate transfer on two unseen down-datasets. Our evaluations show that, after fine-tuning, NeuroShield reduces equal error rate by 0.44–8.06 percentage points relative to the state of the art. NeuroShield further generalizes to segments longer than those seen during training and operates across channel layouts not encountered during pretraining. These results establish NeuroShield as a reusable and adaptable EEG identity encoder across heterogeneous recording settings. We release NeuroShield as open source to support reproducibility and community adoption.",
+      "citation": "BIBTEX_CITATION_HERE",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "mainEntity": {
+        "@type": "WebPage",
+        "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "RESEARCH_AREA_1"
+        },
+        {
+          "@type": "Thing",
+          "name": "RESEARCH_AREA_2"
         }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
+      ]
+    }
   </script>
   
   <!-- Website/Organization Structured Data -->
@@ -241,23 +249,20 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">NeuroShield: A Device-Agnostic Foundation Model for EEG Authentication</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Matin Fallahi</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Patricia Arias-Cabarcos</a><sup>°</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Thosten Strufe</a><sup>*</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup>*</sup> Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany<br><sup>°</sup>Joint Research Centre, European Commission</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -284,9 +289,8 @@
                     </a>
                   </span>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/kit-ps/NeuroShield-FM" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -314,23 +318,22 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Overview of the NeuroShield architecture-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container has-text-centered" style="margin-bottom: 2rem, margin-top: -2rem">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
+      <img
+      src="static/images/NeuroShieldOverview.png"
+      alt="Banner"
+      class="hero-image">
+
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Overview of the NeuroShield Architecture
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End Overview of the NeuroShield architecture -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -339,9 +342,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            A central challenge in EEG authentication is that models are typically tied to the acquisition settings in which they are trained. In particular, variations in headset hardware, channel layout, and signal duration create heterogeneous recordings that existing models are not designed to handle, causing each new headset or dataset to be treated as a separate model-development problem. This fragmentation limits multi-dataset learning, hinders knowledge transfer, and reduces model reusability. To address this limitation, we present NeuroShield, a reusable foundation model for EEG authentication that learns identity-discriminative embeddings from variable-channel and variable-length EEG recordings through a dual-stage transformer architecture. We pretrain NeuroShield on three public EEG datasets comprising 15,762 subjects and 28,116 sessions, and evaluate transfer on two unseen down-datasets. Our evaluations show that, after fine-tuning, NeuroShield reduces equal error rate by 0.44–8.06 percentage points relative to the state of the art. NeuroShield further generalizes to segments longer than those seen during training and operates across channel layouts not encountered during pretraining. These results establish NeuroShield as a reusable and adaptable EEG identity encoder across heterogeneous recording settings. We release NeuroShield as open source to support reproducibility and community adoption.
           </p>
         </div>
       </div>
@@ -350,125 +352,249 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- Chnage-log -->
+  <section class="section pipeline-section hero is-light" id="Changelog">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Changelog</h2>
+      <div class="timeline-content">
+        <div class="timeline-text">
+          <div class="timeline-item-header">
+            <span class="timeline-item-header">Change 1</span>
+            <span class="changelog-tag tag-new">New development</span>
           </div>
+          <p class="timeline-description">Description of Change 1.</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+      <div class="timeline-content">
+        <div class="timeline-text">
+          <div class="timeline-item-header">
+            <span class="timeline-item-header">Change 2</span>
+            <span class="changelog-tag tag-update">Better version</span>
+          </div>
+          <p class="timeline-description">Longer description of Change 2.</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+      <div class="timeline-content">
+        <div class="timeline-text">
+          <div class="timeline-item-header">
+            <span class="timeline-item-header">Change 3</span>
+            <span class="changelog-tag tag-alert">Alert!</span>
+          </div>
+          <p class="timeline-description">Even longer description of Change 3. bla bla bla bla bla bla bla bla bla </p>
+        </div>
       </div>
     </div>
   </section>
-<!--End paper poster -->
+<!-- End Chnage-log -->
+
+<!-- Processing Pipeline -->
+<section class="section pipeline-section hero is-light" id="Pipeline">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Processing Pipeline</h2>
+      <div class="pipeline-timeline">
+
+        <div class="pipeline-item">
+          <div class="timeline-content">
+            <div class="timeline-text">
+              <div class="pipeline-header">
+                <span class="timeline-item-header">EEG Input</span>
+              </div>
+              <p class="timeline-description">Authentication begins with an EEG segment.</p>
+            </div>
+            <div class="pipeline-image">
+              <img src="static/images/EEGInput.png" alt="EEG Input">
+            </div>
+          </div>
+        </div>
+
+        <div class="pipeline-item">
+          <div class="timeline-content">
+            <div class="timeline-text">
+              <div class="pipeline-header">
+                <span class="timeline-item-header">Temporal Patching</span>
+              </div>
+              <p class="timeline-description">The model uses transformer-based modeling to group neighbouring samples into fixed-length patches.</p>
+            </div>
+            <div class="pipeline-image">
+              <img src="static/images/Patch.png" alt="EEG Input">
+            </div>
+          </div>
+        </div>
+
+        <div class="pipeline-item">
+          <div class="timeline-content">
+            <div class="timeline-text">
+              <div class="pipeline-header">
+                <span class="timeline-item-header">Patch Encoder</span>
+              </div>
+              <p class="timeline-description">NeuroShield employs a patch encoder to capture relationships between patches using self-attention.</p>
+            </div>
+            <div class="pipeline-image">
+              <img src="static/images/PatchEncoder.png" alt="EEG Input">
+            </div>
+          </div>
+        </div>
+
+        <div class="pipeline-item">
+          <div class="timeline-content">
+            <div class="timeline-text">
+              <div class="pipeline-header">
+                <span class="timeline-item-header">Temporal Transformer</span>
+              </div>
+              <p class="timeline-description">The model generates a compact temporal summary and captures long-range temporal dependencies.</p>
+            </div>
+            <div class="pipeline-image">
+              <img src="static/images/TemporalTransformer.png" alt="EEG Input">
+            </div>
+          </div>
+        </div>
+
+        <div class="pipeline-item">
+          <div class="timeline-content">
+            <div class="timeline-text">
+              <div class="pipeline-header">
+                <span class="timeline-item-header">Channel Transformer</span>
+              </div>
+              <p class="timeline-description">The model uses a learned coordinate encoder mapping each channel position to a geometry-aware positional embedding.</p>
+            </div>
+            <div class="pipeline-image">
+              <img src="static/images/SpatialTransformer.png" alt="EEG Input">
+            </div>
+          </div>
+        </div>
+
+        <div class="pipeline-item">
+          <div class="timeline-content">
+            <div class="timeline-text">
+              <div class="pipeline-header">
+                <span class="timeline-item-header">Embedding Learning</span>
+              </div>
+              <p class="timeline-description">NeuroShield enhances subject seperability using supervised contrastive loss.</p>
+            </div>
+            <div class="pipeline-image">
+              <img src="static/images/EmbeddingLearning.png" alt="EEG Input">
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+
+</section>
+<!-- End Processing Pipeline -->
+
+<!-- Evaluation of the model -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Evaluation</h2>
+        <div class="content has-text-justified">
+          <p>
+            The evaluation of the NeuroShield model support the view that EEG authentication can be
+            approached as a reusable representation-learning problem
+            rather than as a sequence of isolated dataset-specific models.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Evaluation of the model -->
+
+<!-- Image carousel of Evaluation results -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+       <div class="item">
+        <img src="static/images/Table2.png" alt="Heatmap visualization of the Equal Error Rate across different datasets and training conditions" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Downstream transfer performance under different training strategies (reported as Equal-Error-Rate, %)
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/Figure3.png" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Input Flexibility Analysis: Temporal Flexibility and Channel-Layout Perturbations
+       </h2>
+     </div>
+     <div class="item">
+      <img src="static/images/Figure4.png" alt="Fourth research result visualization" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+        Robustness to random missing verification channels
+      </h2>
+    </div>
+    <div class="item">
+      <img src="static/images/Figure5.png" alt="Third research result visualization" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+        Training-data and channel-generalization analysis
+      </h2>
+    </div>
+        <div class="item">
+          <img src="static/images/Figure6.png" alt="Third research result visualization" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Channel-level spatial analysis
+          </h2>
+        </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel of Evaluation results -->
 
 
+<!-- Preview of the full Paper -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Read the full Paper</h2>
+      <iframe  src="static/pdfs/NuroShild_Paper_Arxiv.pdf" width="100%" height="550">
+          </iframe>
+      </div>
+    </div>
+  </section>
+<!--End preview of the full Paper -->
+
+<!-- Code Example -->
+<section class="section hero is-light" id="Code Example">
+  <div class="container is-may-desktop content">
+    <div class="column is-centered has-text-centered">
+      <div class="column is-four-fiths">
+        <h2 class="title is-3">Code Example</h2>
+        <div class="content has-text-justified">
+          <p>
+            The simplest direct model input is a NumPy bundle containing EEG windows (shape [N, C, T], dtype float32), a channel-validity mask (with shape [N, C], dtype bool) and channel 3D positions (shape [N, C, 3], dtype float32).
+          </p>
+          <p>
+            Where N is the number of windows, C is the number of channel slots in this batch and T is the number of samples per window.
+          </p>
+
+          <pre id="example-code"><code> python examples/minimal_inference.py --input-npz sample_batch.npz
+        --output-npy sample_embeddings.npy</code></pre>
+          <p>
+            The .npz file should contain X, M and P.
+
+            The script then loads the pretrained checkpoint from ckpts_bw_replicate_varlen/ and writes one embedding per input window.
+          </p>
+          <pre id="example-code"><code>mod = _import_train_module(str(args.cuda_devices))
+          device = _resolve_device(mod, str(args.cuda_devices))
+          model, embed_dim = mod.build_model(
+          trial=None,
+          num_channels=len(mod.REF_CLIST_NORM),
+          device=device,
+          fixed_params=trial_params,
+    )</code></pre>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Code Example -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
@@ -481,10 +607,10 @@
         </button>
       </div>
       <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
+  title={NeuroShield: A Device-Agnostic Foundation Model for EEG Authentication},
+  author={Matin Fallahi, Patricia Aria-Cabarcos, Thosten Strufe},
   journal={Conference/Journal Name},
-  year={2024},
+  year={2026},
   url={https://your-domain.com/your-project-page}
 }</code></pre>
     </div>
@@ -511,10 +637,10 @@
 </footer>
 
 <!-- Statcounter tracking code -->
-  
+
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
-
+</main>
   </body>
   </html>
