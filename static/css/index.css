@@ -98,6 +98,11 @@ body {
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
+.is-light {
+  background: var(--background-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
 
 .hero-body {
   padding: 4rem 1.5rem;
@@ -926,6 +931,35 @@ align-items: center;
   box-sizing: border-box;
   padding: 1rem;
 }
+
+.plotter-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 1.5rem 0;
+        padding: 0 1rem;
+        box-sizing: border-box;
+      }
+
+
+      #plotter {
+        width: min(95vw, 1000px);
+        aspect-ratio: 1 / 1;
+        /
+        max-width: 1200px;
+        background: transparent;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        margin: 0 auto;
+      }
+
+
+      @media (min-width: 1024px) {
+        #plotter {
+          width: 80%;
+          max-width: 1000px;
+        }
+      }
 
 @media screen and (max-width: 768px) {
   #code-example .column {
