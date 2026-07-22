@@ -648,38 +648,17 @@ TP9,-0.085619200,-0.046514700,-0.045707000,true,true,false
         const zCol = headers.indexOf('z');
         const trainingCol = headers.indexOf('foundation_training');
         const testColPeers = headers.indexOf('peers_evaluation');
-        const testColFrc = headers.indexOf('frc_eeg_evaluation');
 
         const groups = {
 
-          foundationTrainingOnly: {
-            name: 'foundation training',
+          foundationTraining: {
+            name: 'channels present in foundation training',
             x: [], y: [], z: [], text: []
           },
-          peersEvaluationOnly: {
-            name: 'PEERS evaluation',
+          peersEvaluation: {
+            name: 'unseen channels during training',
             x: [], y: [], z: [], text: []
           },
-          frcEvaluationOnly: {
-            name: 'FRC evaluation',
-            x: [], y: [], z: [], text: []
-          },
-          foundationTrainingPeers: {
-            name: 'foundation training and PEERS',
-            x: [], y: [], z: [], text: []
-          },
-          foundationTrainingFrc: {
-            name: 'foundation training and FRC',
-            x: [], y: [], z: [], text: []
-          },
-          foundationTrainingPeersFrc: {
-            name: 'foundation training, PEERS and FRC',
-            x: [], y: [], z: [], text: []
-          },
-          peersFrc: {
-            name: 'PEERS and FRC',
-            x: [], y: [], z: [], text: []
-          }
         };
 
         for (let i = 1; i < lines.length; i++) {
@@ -687,30 +666,14 @@ TP9,-0.085619200,-0.046514700,-0.045707000,true,true,false
 
           const training = row[trainingCol] === 'true';
           const peersEvaluation = row[testColPeers] === 'true';
-          const frcEvaluation = row[testColFrc] === 'true';
 
           let group;
 
-          if (training && peersEvaluation && frcEvaluation) {
-            group = groups.foundationTrainingPeersFrc;
-
-          } else if (training && peersEvaluation) {
-            group = groups.foundationTrainingPeers;
-
-          } else if (training && frcEvaluation) {
-            group = groups.foundationTrainingFrc;
-
-          } else if (peersEvaluation && frcEvaluation) {
-            group = groups.peersFrc;
-
-          } else if (training) {
-            group = groups.foundationTrainingOnly;
+          if (training) {
+            group = groups.foundationTraining;
 
           } else if (peersEvaluation) {
-            group = groups.peersEvaluationOnly;
-
-          } else if (frcEvaluation) {
-            group = groups.frcEvaluationOnly;
+            group = groups.peersEvaluation;
 
           } else {
             continue;
@@ -763,7 +726,7 @@ TP9,-0.085619200,-0.046514700,-0.045707000,true,true,false
         });
       }
     </script>
-    <p class="has-text-centered">Electrode channels present in foundation training, PEERS and FRC evaluation.</p>
+    <p class="has-text-centered">Electrode channels present in foundation training and evaluation.</p>
   </div>
 </section>
 <!-- End Visualization of Electrode Positions -->
