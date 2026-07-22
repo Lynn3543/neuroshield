@@ -174,8 +174,8 @@ body {
 }
 
 .results-carousel .subtitle {
-  font-size: 1rem !important;
-  color: var(--text-secondary);
+  font-size: 1.15rem !important;
+  color: var(#1e293b);
   margin-top: 1rem;
   font-weight: 500;
 }

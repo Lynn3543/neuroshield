@@ -18,8 +18,7 @@
   <meta property="og:title" content="NeuroShield: A Device-Agnostic Foundation Model for EEG Authentication">
   <meta property="og:description" content="NeuroShield unifies EEG authentication across varying channels and recording lengths, achieving robust transfer and state-of-the-art accuracy.">
   <meta property="og:url" content="https://Lynn3543.github.io/neuroshield">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image" content="https://lynn3543.github.io/neuroshield/static/images/previewImage.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="NeuroShield: A Device-Agnostic Foundation Model for EEG Authentication - NeuroShield unifies EEG authentication across varying channels and recording lengths, achieving robust transfer and state-of-the-art accuracy.">
@@ -88,7 +87,6 @@
   <script defer src='https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.0/plotly.min.js'></script>
   
   <!-- Structured Data for Academic Papers -->
-  <!-- TODO: Create a 1200x630px preview image and update path -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -127,7 +125,7 @@
         "name": "Karlsruhe Institute of Technology"
       },
       "url": "https://lynn3543.github.io/neuroshield/",
-      "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+      "image": "https://lynn3543.github.io/neuroshield/static/images/previewImage.png",
       "keywords": [
         "EEG authentication",
         "brainwave authentication",
@@ -271,7 +269,7 @@
 
 <!-- Overview of the NeuroShield architecture-->
 <section class="hero teaser">
-  <div class="container has-text-centered" style="margin-bottom: 2rem; margin-top: -2rem">
+  <div class="container has-text-centered" style="margin-bottom: 2rem">
     <div class="hero-body">
       <img
       src="static/images/NeuroShieldOverview.png"
@@ -328,30 +326,20 @@
       <div class="timeline-content">
         <div class="timeline-text">
           <div class="timeline-item-header">
-            <span class="timeline-item-header">Change 1</span>
-            <span class="changelog-tag tag-new">New development</span>
+            <span class="timeline-item-header">Paper Published</span>
+            <span class="changelog-tag tag-new">Publication</span>
           </div>
-          <p class="timeline-description">Description of Change 1.</p>
+          <p class="timeline-description">The NeuroShield paper was published on arXiv, introducing a device-agnostic foundation model for EEG authentication and making the work publicly available to the research community.</p>
         </div>
       </div>
 
       <div class="timeline-content">
         <div class="timeline-text">
           <div class="timeline-item-header">
-            <span class="timeline-item-header">Change 2</span>
-            <span class="changelog-tag tag-update">Better version</span>
+            <span class="timeline-item-header">Conference Submission</span>
+            <span class="changelog-tag tag-update">Submitted</span>
           </div>
-          <p class="timeline-description">Longer description of Change 2.</p>
-        </div>
-      </div>
-
-      <div class="timeline-content">
-        <div class="timeline-text">
-          <div class="timeline-item-header">
-            <span class="timeline-item-header">Change 3</span>
-            <span class="changelog-tag tag-alert">Alert!</span>
-          </div>
-          <p class="timeline-description">Even longer description of Change 3. bla bla bla bla bla bla bla bla bla </p>
+          <p class="timeline-description">NeuroShield was submitted to the 48th IEEE Symposium on Security and Privacy (IEEE S&P 2027) for peer review. :contentReference[oaicite:0]{index=0}.</p>
         </div>
       </div>
     </div>
@@ -482,55 +470,41 @@
        <div class="item">
         <img src="static/images/EERHeatMap.png" alt="Heatmap visualization of the Equal Error Rate across different datasets and training conditions" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Performance of the NeuroShield model on unseen data is evaluated using heterogeneous pretraining methods (reported as Equal-Error-Rate, %), where greener cells indicate lower EER within each dataset.
+          The results show that <strong>NeuroShield achieves strong performance across heterogeneous pretraining settings</strong>, with lower Equal Error Rates (EER) indicated by greener cells within each dataset.
         </h2>
       </div>
       <div class="item">
         <img src="static/images/InputFlexibilityAnalysis.png" alt="Input Flexibility Analysis visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Input Flexibility Analysis: Temporal Flexibility and Channel-Layout Perturbations. The results (a) show that NeuroShield remains effective across variable input durations and can generalize to longer temporal windows than those seen during training.
-          The model is not tied to a canonical channel ordering, since the performance does not drop significantly (b).
+          The results show that <strong>NeuroShield is robust to varying input durations and channel layouts</strong>. The model generalizes to longer temporal windows than those seen during training (a) and remains largely unaffected by changes in channel ordering (b).
        </h2>
      </div>
      <div class="item">
       <img src="static/images/MissingVerificationChannelRobustness.png" alt="Robustness to random missing verification channels visualization" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
-        The figure shows that NeuroShield can tolerate a small number of noisy or missing channels as the EER rises gradually as the verification-time channel-removal rate increases.
+        The results show that <strong>NeuroShield is robust to noisy or missing EEG channels</strong>, as the Equal Error Rate increases only gradually with higher channel-removal rates during verification.
 
       </h2>
     </div>
     <div class="item">
       <img src="static/images/ChannelGeneralizationAnalysis.png" alt="Training-data and channel-generalization analysis visualization" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
-        The effect of pretraining data composition is evaluated showing that the model benefits from multi-session data (a).
-        The model achieves comparable performance on both seen and previously unseen EEG channels, indicating strong channel generalization and low dependence on specific channel identities (b).
+        The results show that <strong>NeuroShield benefits from multi-session pretraining data</strong> (a) and achieves comparable performance on both seen and previously unseen EEG channels, demonstrating <strong>strong channel generalization</strong> with low dependence on specific channel identities (b).
       </h2>
     </div>
         <div class="item">
           <img src="static/images/SpatialAnalysis.png" alt="Channel-level spatial analysis visualization" loading="lazy"/>
 
           <h2 class="subtitle has-text-centered">
-            The results show that removing individual channels has only a limited impact on performance, while single-channel evaluations reveal spatial differences in discriminative biometric information across the scalp.
+            The results show that <strong>individual channel removal has only a limited impact on performance</strong>, while single-channel evaluations reveal spatial differences in the biometric information provided by different scalp regions.
           </h2>
-        </div>
-
-        <div class="item">
-          <img src="static/images/SpatialAnalysis.png" alt="Channel-level spatial analysis visualization" loading="lazy"/>
-          <div class="timeline-content">
-            <div class="timeline-text">
-              <div class="timeline-item-header">
-                <span class="timeline-item-header">Channel-level spatial analysis</span>
-
-              </div>
-              <p class="timeline-description">The results show that removing individual channels has only a limited impact on performance, while single-channel evaluations reveal spatial differences in discriminative biometric information across the scalp.</p>
-            </div>
-          </div>
         </div>
   </div>
 </div>
 </div>
 </section>
 <!-- End image carousel of Evaluation results -->
+
 
 
 <!-- Visualization of Electrode Positions -->
@@ -818,21 +792,23 @@ TP9,-0.085619200,-0.046514700,-0.045707000,true,true,false
         <div class="content">
 
           <p>
-            This website was built using the
-            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">
-              Academic Project Page Template
-            </a>,
+            This website was developed by <strong>Lynn Keil</strong> for the NeuroShield project.
+            It is based on the
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>,
             which was adopted from the
-            <a href="https://nerfies.github.io" target="_blank">Nerfies</a>
-            project page. Additional code was adapted from the
-            <a href="https://brain-bzh.github.io/reve/" target="_blank">REVE</a>
-            project website.
-            We gratefully acknowledge the authors for making their code publicly available.
-            <br>
-            This website is licensed under a
-            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+            <a href="https://nerfies.github.io">Nerfies project page</a>.
+            Additional code was adapted from the
+            <a href="https://brain-bzh.github.io/reve/">REVE project website</a>.
+            We gratefully acknowledge the original authors for making their code publicly available.
+          </p>
+
+          <p>
+            This website is licensed under the
+            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
               Creative Commons Attribution-ShareAlike 4.0 International License
             </a>.
+            You are welcome to reuse and adapt the source code, provided that appropriate attribution
+            is given to the original authors and to this website.
           </p>
 
         </div>
