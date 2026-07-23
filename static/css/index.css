@@ -507,9 +507,9 @@ code {
   }
   
   .more-works-container {
-    bottom: 2rem;
+    top: 2rem;
     right: 1rem;
-    top: auto;
+    bottom: auto;
   }
   
   .more-works-btn {
@@ -520,7 +520,7 @@ code {
   .more-works-dropdown {
     width: calc(100vw - 2rem);
     right: -1rem;
-    bottom: calc(100% + 0.5rem);
+    top: calc(100% + 0.5rem);
     top: auto;
   }
   
