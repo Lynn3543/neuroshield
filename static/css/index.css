@@ -521,7 +521,7 @@ code {
     width: calc(100vw - 2rem);
     right: -1rem;
     top: calc(100% + 0.5rem);
-    top: auto;
+    bottom: auto;
   }
   
   .results-carousel .item {
@@ -549,7 +549,7 @@ code {
   
   .more-works-container {
     position: fixed;
-    bottom: 2rem;
+    top: 2rem;
     right: 1rem;
     z-index: 1000;
   }
@@ -561,7 +561,8 @@ code {
   
   .more-works-dropdown {
     position: absolute;
-    bottom: calc(100% + 0.5rem);
+    top: calc(100% + 0.5rem);
+    bottom: auto;
     right: 0;
     width: calc(100vw - 2rem);
     max-width: 90vw;
