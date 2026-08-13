@@ -30,10 +30,29 @@ The model was pretrained on three public EEG datasets comprising 15,762 subjects
 - 📈 Plotly
 - 📖 GitHub Pages
 
-## Repository structure 
+## Repository Structure
 
-## Deploymet
+This repository contains the source code and assets required for the NeuroShield academic project page. The main files and directories are:
 
+1. **`index.html`:**
+   The main entry point of the website, containing the page structure and scientific content of the NeuroShield project page.
+
+2. **`static/`:**
+   Contains the supporting assets of the website, including stylesheets, JavaScript functionality, images, figures, and other resources used throughout the project page.
+
+3. **`.nojekyll`:**
+   Ensures that GitHub Pages serves the website as a static site without processing it through Jekyll.
+
+4. **`README.md`:**
+   Provides an overview of the project page, its components, technologies, repository structure, and development information.
+
+## Deployment
+
+The NeuroShield project page is deployed using **GitHub Pages**, allowing the website to be hosted directly from this repository. As the website is implemented as a static site, no additional server-side infrastructure or build process is required.
+
+Changes pushed to the deployed branch are automatically reflected on the publicly available project page:
+
+**https://lynn3543.github.io/neuroshield/**
 
 ## Acknowledgments
 Parts of this project page were based on the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) which was adopted from the [Nerfies Project Page](https://nerfies.github.io/). 
