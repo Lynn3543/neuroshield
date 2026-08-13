@@ -10,6 +10,17 @@ The model was pretrained on three public EEG datasets comprising 15,762 subjects
 
 ## Components
 
+1.  ⚡ Hero Section
+2.  📝 Overview over the NeuroShield architecture
+3.  📎 Abstract
+4.  📅 Changelog
+5.  ⌛ Data processing pipeline
+6.  🤔 Evaluation results
+7.  📊 3D electrode plot visualization
+8.  📜 Preview of the full paper
+9.  👩‍💻 Code example for usage of the model
+10. 📌 BibTex citation 
+
 ## Technologies
 
 ## Repository structure 
