@@ -1,6 +1,12 @@
 # Academic Project Page for the NeuroShield Model
 
+This repository contains the official project page for the [NeuroShield Model](https://github.com/kit-ps/NeuroShield-FM) presented in the paper [NeuroShield: A Device-Agnostic Foundation Model for EEG Authentication](https://arxiv.org/abs/2606.20673).
+
 ## About NeuroShield 
+
+NeuroShield is a device-agnostic foundation model for EEG-based authentication designed to overcome the dependency of existing approaches on specific acquisition settings. EEG recordings can vary considerably across headset hardware, channel layouts, and signal durations, which limits knowledge transfer and often requires separate models for different datasets or devices. NeuroShield addresses this challenge by learning identity-discriminative embeddings from variable-channel and variable-length EEG recordings using a dual-stage transformer architecture.
+
+The model was pretrained on three public EEG datasets comprising 15,762 subjects and 28,116 sessions and evaluated on two previously unseen downstream datasets. After fine-tuning, NeuroShield reduces the Equal Error Rate (EER) by 0.44–8.06 percentage points compared with the state of the art. It further demonstrates the ability to process signal durations and channel layouts not encountered during pretraining, supporting its use as a reusable and adaptable EEG identity encoder across heterogeneous recording settings.
 
 ## Components
 
