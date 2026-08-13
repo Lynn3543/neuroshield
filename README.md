@@ -23,6 +23,13 @@ The model was pretrained on three public EEG datasets comprising 15,762 subjects
 
 ## Technologies
 
+- 🗂️ HTML
+- 🔤 CSS
+- 🚨 JavaScript
+- 📁 Bulma
+- 📈 Plotly
+- 📖 GitHub Pages
+
 ## Repository structure 
 
 ## Deploymet
