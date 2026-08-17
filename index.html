@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- use width of device as orientation -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Primary Meta Tags -->
@@ -12,12 +13,12 @@
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph, produces link preview -->
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Karlsruher Institute of Technology">
+  <meta property="og:site_name" content="Karlsruhe Institute of Technology">
   <meta property="og:title" content="NeuroShield: A Device-Agnostic Foundation Model for EEG Authentication">
   <meta property="og:description" content="NeuroShield unifies EEG authentication across varying channels and recording lengths, achieving robust transfer and state-of-the-art accuracy.">
-  <meta property="og:url" content="https://Lynn3543.github.io/neuroshield">
+  <meta property="og:url" content="https://lynn3543.github.io/neuroshield/">
   <meta property="og:image" content="https://lynn3543.github.io/neuroshield/static/images/previewImage.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -62,14 +63,12 @@
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   
-  <!-- Fallback for browsers that don't support preload -->
+  <!-- Fallback for browsers that don't support preload as it uses JavaScript -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
@@ -82,7 +81,6 @@
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
   <script defer src='https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.0/plotly.min.js'></script>
   
@@ -354,6 +352,7 @@
     <h2 class="title is-3 has-text-centered">Processing Pipeline</h2>
       <div class="pipeline-timeline">
 
+        <!-- consistent styling using the same CSS classes -->
         <div class="pipeline-item">
           <div class="timeline-content">
             <div class="timeline-text">
@@ -614,18 +613,23 @@ TP9,-0.085619200,-0.046514700,-0.045707000,true,true,false
 
     `;
 
+      // use generatePlot when the HTML structure is built
       document.addEventListener('DOMContentLoaded', generatePlot);
 
       function generatePlot() {
+
+        // process the data by removing whitespaces, splitting the csv in rows and defining the column hedaers
         const lines = csvData.trim().split(/\r?\n/);
         const headers = lines[0].split(',');
 
+        // define columns based on their names rather than their position
         const xCol = headers.indexOf('x');
         const yCol = headers.indexOf('y');
         const zCol = headers.indexOf('z');
         const trainingCol = headers.indexOf('foundation_training');
         const testColPeers = headers.indexOf('peers_evaluation');
 
+        // define possible groups
         const groups = {
 
           foundationTraining: {
@@ -641,11 +645,14 @@ TP9,-0.085619200,-0.046514700,-0.045707000,true,true,false
         for (let i = 1; i < lines.length; i++) {
           const row = lines[i].split(',');
 
+          // string comparison as row[...] contains strings
           const training = row[trainingCol] === 'true';
           const peersEvaluation = row[testColPeers] === 'true';
 
+          // make reassignment of groups possible with 'let' instead of 'const'
           let group;
 
+          // assign groups to the channels prioritizing the training variable
           if (training) {
             group = groups.foundationTraining;
 
@@ -656,12 +663,14 @@ TP9,-0.085619200,-0.046514700,-0.045707000,true,true,false
             continue;
           }
 
+          // store float representation of coordinates
           group.x.push(parseFloat(row[xCol]));
           group.y.push(parseFloat(row[yCol]));
           group.z.push(parseFloat(row[zCol]));
           group.text.push(row[0]);
         }
 
+        // generate plot trace
         const plotTraces = Object.values(groups)
           .filter(group => group.x.length > 0)
           .map(group => ({
@@ -669,12 +678,16 @@ TP9,-0.085619200,-0.046514700,-0.045707000,true,true,false
             y: group.y,
             z: group.z,
             text: group.text,
+
+            // make interaction with the plot possible
             hovertemplate:
             '<b>%{text}</b><br>' +
             'x: %{x:.8f}<br>' +
             'y: %{y:.8f}<br>' +
             'z: %{z:.8f}' +
             '<extra>%{fullData.name}</extra>',
+
+            // define plot and data points
             mode: 'markers',
             type: 'scatter3d',
             name: group.name,
@@ -698,6 +711,7 @@ TP9,-0.085619200,-0.046514700,-0.045707000,true,true,false
           margin: { l: 0, r: 0, b: 0, t: 40 }
         };
 
+        // generate plot
         Plotly.newPlot('plotter', plotTraces, layout, {
           responsive: true
         });
