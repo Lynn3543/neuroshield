@@ -165,8 +165,7 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-.results-carousel .item img,
-.results-carousel video {
+.results-carousel .item img {
   margin: 0;
   border-radius: var(--border-radius);
   width: 100%;
@@ -391,6 +390,7 @@ code {
   box-shadow: var(--shadow-xl);
   opacity: 0;
   visibility: hidden;
+  /* creates a smooth fade and slide animation when showing the dropdown */
   transform: translateY(-10px);
   transition: var(--transition);
   max-height: 70vh;
@@ -400,6 +400,7 @@ code {
 .more-works-dropdown.show {
   opacity: 1;
   visibility: visible;
+  /* creates a smooth fade and slide animation when showing the dropdown */
   transform: translateY(0);
 }
 
@@ -488,8 +489,6 @@ code {
     padding: 2rem 1rem;
   }
 
-
-  
   .publication-title {
     font-size: 2.5rem !important;
     line-height: 1.2 !important;
@@ -585,7 +584,6 @@ code {
     padding: 3rem 2rem;
   }
 
-
 }
 
 /* Animation for page load */
@@ -665,6 +663,7 @@ code {
   box-shadow: 0 0 0 6px var(--background-secondary), 0 0 0 10px var(--primary-hover);
 }
 
+/* Produce an item for every point except the last one */
 .pipeline-item:not(:last-child)::after {
   content: '';
   position: absolute;
@@ -725,10 +724,9 @@ code {
 }
 
 .timeline-item-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-weight: 700;
   color: var(--text-primary);
   font-size: 0.95rem;
