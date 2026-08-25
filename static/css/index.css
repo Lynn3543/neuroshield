@@ -81,6 +81,32 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* KIT Logo */
+.kit-branding {
+  padding: 2rem 2rem 0;
+  margin-bottom: -2.5rem;
+  background: var(--background-primary);
+}
+
+.kit-branding img {
+  width: 250px;
+  height: auto;
+  display: block;
+}
+
+.kit-logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+}
+
+.kit-logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
 .hero-body {
   padding: 4rem 1.5rem;
 }
@@ -488,6 +514,21 @@ code {
   .hero-body {
     padding: 2rem 1rem;
   }
+  .kit-logo {
+     position: static;
+     display: block;
+     width: fit-content;
+     margin: 1rem auto 0;
+  }
+
+  .kit-logo img {
+     width: 110px;
+  }
+
+  .hero-body {
+     padding: 2rem 1rem;
+  }
+
 
   .publication-title {
     font-size: 2.5rem !important;

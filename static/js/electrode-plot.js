@@ -1,6 +1,7 @@
 
+// data describing the different data points
 const csvData = `
-,x,y,z,foundation_training,peers_evaluation,frc_eeg_evaluation
+  ,x,y,z,foundation_training,peers_evaluation,frc_eeg_evaluation
 AF1,-0.018471700,0.079904100,0.032752000,false,true,false
 AF10,0.050435200,0.063869800,-0.048005000,false,true,false
 AF2,0.019820300,0.080301900,0.032764000,false,true,false
